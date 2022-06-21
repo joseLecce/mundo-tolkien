@@ -65,8 +65,17 @@ h1{
   font-weight: bold;
   text-align: center;
   padding: 10%;
-
 }
+
+/*------------ AGREGE ANIMACIÓN ----------------------*/
+h1:hover{
+
+  animation-name: tituloEnMovimiento;
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
 nav{
   grid-area: nav;
   
@@ -79,6 +88,12 @@ nav{
   display: flex;
   justify-content: space-between;
 
+}
+
+.navegador:hover {
+
+  font-size: 2rem ;
+  transition-duration: 500ms;
 }
 
 /*----------- trabajo main en general --------------*/
@@ -219,6 +234,16 @@ width: 50%;
   align-items: center;
 }
 
+.linea p {
+  transform: translate(100%);
+
+}
+
+.linea #caratula {
+
+  transform: translate(-100%);
+ 
+}
 
 }
 
@@ -246,10 +271,9 @@ width: 50%;
   .contenedorGaleria {
     
     padding: 40px;
-
-  
   
   }
+
 
   .cardImagen {
     min-width: 400px;
@@ -259,6 +283,57 @@ width: 50%;
     align-items: center;
     padding: 20px;
     }
+
+    .cardImagen:hover {
+
+      transform: scale(2);
+      transition-duration: 500ms;
+      transition-delay: 0.5s;
+      transition-timing-function:ease-out;
+
+    }
+
+    .linea p {
+      transform: translate(0);
+    
+    }
+    
+    .linea #caratula {
+    
+      transform: translate(0);
+      
+    }
+
+
+
+  /*-------------- KEYFRAMES -------------------*/
+
+
+@keyframes tituloEnMovimiento {
+
+    0% {
+      transform: rotate(0deg);
+    }
+
+    25 % {
+      transform: rotate(90deg);
+    }
+
+    50 % {
+      transform: rotate(180deg);
+    }
+
+    75% {
+      transform: rotate(270deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+
+}
+
+
 
 
 }
