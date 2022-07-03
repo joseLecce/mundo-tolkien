@@ -1,0 +1,23 @@
+/* ---------- parametros por defecto ------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------- formato para limpiar hipervinculos ---------  */
+
+a {
+    text-decoration: none;
+    font-style: normal;
+    color:black;
+}
+
+/* ---------- Trabajo body en general ------------*/
+
+//se que no es parte de un reset per se, pero como es el unico valor que va al body, prefiero no hacer un archivo nuevo por una sola linea
+
+body {
+    background-color: rgb(177, 164, 164);
+    
+}
