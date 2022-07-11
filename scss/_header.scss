@@ -1,4 +1,4 @@
-/*-------------- trabajo header en general ----------- */
+//-------------- trabajo header en general ----------- 
 
 header {
 
@@ -7,21 +7,44 @@ header {
 
 }
 
-.menuNavegador {
-    background-color: #CC1414;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
+// -------------------- CREO MIXIN PARA TRABAJAR HEADER-----------------
+
+@mixin fontEdit ($family, $size) {
+    font-family: $family;
+    font-size: $size;   
+    
+}
+
+// ------------------ CREO MAP PARA LOS COLORES DE LOS NAV --------------
+
+
+
+$navColor: (
+    Navegador: #CC1414,
+    Redes: aqua,
+);
+
+
+// ----------------- Aplico EXTEND para las NAVS ----------------------
+
+.menuBase {
     padding: 0;
     margin: 0;
 }
 
-.menuRedes {
-    background-color:aqua;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1rem;
-    padding: 0;
-    margin: 0;
+.menuNavegador {
+    background-color: map-get($navColor , Navegador);
+    @extend .menuBase;
+    @include fontEdit('Georgia' , 1.5rem)
+    
 }
+
+.menuRedes {
+    background-color: map-get($navColor, Redes);
+    @extend .menuBase;  
+    @include fontEdit('Courier New' , 1rem)
+}
+
 
 
 
