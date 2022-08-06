@@ -52,7 +52,7 @@ h1:hover {
 
 main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .tituloArticulo {
@@ -92,6 +92,22 @@ main {
 .nosotros {
   text-align: center;
   padding-bottom: 10px;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.boton {
+  background-color: green;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  color: white;
+  border: double;
+}
+
+.area-texto {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  text-align: justify;
 }
 
 .galeria {
